@@ -25,59 +25,51 @@ footer
     color: gray;
 }
 
+header
+{
+    margin: 40px 5px 20px 5px;
+}
+
 header div
 {
     text-transform: uppercase;
     display: inline-block;
     font-weight: bold;
-    border: 2px solid rgb(184, 181, 181);
     border-radius: 15px/25px;
-    padding: 5px 10px 5px 10px;
-    background-color: rgba(43, 43, 43, 0.616);
-    margin: 10px 5px 40px 5px;
+    padding: 5px 10px;
+    margin: 10px 5px;
     border: 2px solid rgb(231, 187, 104);
     background-color: rgba(78, 76, 72, 0.616);
 }
 
-section
-{
-    margin-top: 50px;
-}
 
 .watch
 {
     margin: auto;
-    border: 10px double black;
-    background-color: rgba(63, 63, 63, 0.507);
     border-radius: 50%;
     height: 250px;
     width: 250px;
     line-height: 250px;
     font-size: 40px;
+    border: 10px double black;
+    background-color: rgba(63, 63, 63, 0.507);
     -webkit-box-shadow: 0px 0px 22px 6px rgb(0, 0, 0);
     -moz-box-shadow: 0px 0px 22px 6px rgb(0, 0, 0);
     box-shadow: 0px 0px 22px 6px rgb(0, 0, 0);
-    position: relative;
 }
 
 .start, .measurement
 {
     display: inline-block;
+    text-transform: uppercase;
+    padding: 5px 10px;
     margin-top: 20px;
-    border: 2px solid rgb(115, 218, 178);
-    padding: 5px 10px 5px 10px;
-    background-color: rgb(68, 97, 86);
     border-radius: 20px;
+    border: 2px solid rgb(115, 218, 178);
+    background-color: rgb(68, 97, 86);
     -webkit-box-shadow: 0px 0px 11px 2px rgb(0, 0, 0);
     -moz-box-shadow: 0px 0px 11px 2px rgb(0, 0, 0);
     box-shadow: 0px 0px 11px 2px rgb(0, 0, 0);
-    text-transform: uppercase;
-}
-
-.start:hover, .measurement:hover
-{
-    cursor: pointer;
-    background-color: rgb(56, 112, 91);
 }
 
 .measurement
@@ -87,6 +79,13 @@ section
     pointer-events: none;
     opacity: 0.5;
 }
+
+.start:hover, .measurement:hover
+{
+    cursor: pointer;
+    background-color: rgb(56, 112, 91);
+}
+
 
 .fa-solid
 {

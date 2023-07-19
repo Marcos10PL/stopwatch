@@ -36,27 +36,34 @@ $('.start').click(function()
     }
 });
 
-function counter(ms) 
+const counter = ms =>
 {
-    if (start == true) {
+    if (start == true) 
+    {
         ms++;
+
         if (music == true) clockA.play();
-        if (ms == 99) {
+
+        if (ms == 99) 
+        {
             seconds++;
             ms = 0;
         }
 
-        if (seconds == 59) {
+        if (seconds == 59) 
+        {
             minutes++;
             seconds = 0;
         }
 
-        if (minutes == 59) {
+        if (minutes == 59) 
+        {
             hours++;
             minutes = 0;
         }
 
-        if (hours == 59) {
+        if (hours == 59) 
+        {
             ms = 0;
             seconds = 0;
             minutes = 0;
@@ -71,7 +78,8 @@ function counter(ms)
 
         miliseconds = ms;
         $('.watch').html(time);
-        setTimeout('counter(' + ms + ')', 10);
+
+        setTimeout(() => counter(ms), 10);
     }
 }
 
@@ -80,7 +88,7 @@ $('.measurement').click(function()
     if(music == true ) clickA.play();
 
     if(start == true)
-        $('.list').append('<p>'+(++nr)+'. '+$('.watch').html()+'</p>');
+        $('.list').append(`<p>${++nr}. ${$('.watch').html()}</p>`);
     else
     {
         miliseconds = 0;
@@ -99,15 +107,14 @@ $('.measurement').click(function()
 
 $('header i[class*="fa-volume"]').click(function() 
 { 
-    $(this).toggleClass('fa-volume-xmark');
-    $(this).toggleClass('fa-volume-high');
+    $(this).toggleClass('fa-volume-xmark').toggleClass('fa-volume-high');
+
     if(music == true) music = false;
     else music = true;
 });
 
 $('header i[class*="fa-toggle"]').click(function() 
 { 
-    $(this).toggleClass('fa-toggle-off');
-    $(this).toggleClass('fa-toggle-on');
+    $(this).toggleClass('fa-toggle-off').toggleClass('fa-toggle-on');
     $('body').toggleClass('day');
 });
